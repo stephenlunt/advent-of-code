@@ -1,3 +1,7 @@
+"""
+https://adventofcode.com/2022/day/9
+"""
+
 from dataclasses import dataclass
 
 @dataclass
@@ -24,8 +28,8 @@ def main():
 
 
 def p1(moves: list) -> int:
-    h = Point(0, 0)
-    t = Point(0, 0)
+    h = Point()
+    t = Point()
     visited = [[0, 0]]
 
     for move in moves:
@@ -40,7 +44,7 @@ def p1(moves: list) -> int:
 
 
 def p2(moves: list) -> int:
-    rope = [ Point(15, 10) for _ in range(10) ]
+    rope = [ Point() for _ in range(10) ]
     visited = [[0, 0]]
 
     for move in moves:
@@ -53,7 +57,7 @@ def p2(moves: list) -> int:
             if [t.x, t.y] not in visited:
                 visited.append([t.x, t.y])
 
-    return len(visited) - 1
+    return len(visited)
 
 
 def move_tail(p: Point, t: Point) -> Point:

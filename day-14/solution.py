@@ -81,7 +81,7 @@ def check(start):
     if grid[y + 1][x] == ".":
         check([x, y + 1])  # Sand falls
     
-    elif grid[y + 1][x] == "o" or grid[y + 1][x]:
+    else:
         if grid[y + 1][x - 1] == ".": 
             check([x - 1, y + 1]) # Diagonal left
         elif grid[y + 1][x + 1] == ".": 

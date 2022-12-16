@@ -18,7 +18,7 @@ def main():
     beacons = beacon_positions(sensors)
     
     print(f"Beacons not present in: {p1(sensors, beacons, 2000000)} positions")
-    print(f"Beacon tuning frequency: {test(sensors)}")
+    print(f"Beacon tuning frequency: {p2(sensors)}")
 
 
 def parse() -> list:
@@ -66,7 +66,7 @@ def p1(sensors: list[Sensor], beacons: set, y: int) -> int:
     return len(covered)
 
 
-def test(sensors: list[Sensor]) -> int:
+def p2(sensors: list[Sensor]) -> int:
     max_y = 4000000 + 1
 
     for y in range(max_y):        

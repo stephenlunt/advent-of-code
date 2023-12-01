@@ -1,2 +1,5 @@
 # VSCode settings
 /.vscode
+
+# Input files
+**/input*
